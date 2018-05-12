@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+
+namespace AutomationFramework.Helpers
+{
+    public static class SelenuimGetMethods
+    {
+
+        public static string GetText(this IWebElement element, string value)
+        {
+                return element.GetAttribute("value");
+
+        }
+
+        public static string GetTextFromDDl(this IWebElement element)
+        {
+                return new SelectElement(element).AllSelectedOptions.SingleOrDefault().Text;
+        }
+    }
+}

@@ -53,7 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountCreationForm.cs" />
+    <Compile Include="Helpers\SeleniumSetMethods.cs" />
+    <Compile Include="Helpers\SelenuimGetMethods.cs" />
+    <Compile Include="Helpers\Utils.cs" />
+    <Compile Include="PageObject\BasePage.cs" />
+    <Compile Include="PageObject\CreateAccount.cs" />
+    <Compile Include="PageObject\LoginPage.cs" />
     <Compile Include="PageObject\MainPage.cs" />
+    <Compile Include="App.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
