@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/AutomationFramework/v15
+/AutomationFramework/obj/Debug
+/AutomationFramework/bin/Debug
