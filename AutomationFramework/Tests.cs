@@ -16,6 +16,7 @@ namespace AutomationFramework
         {
             App.driver = new ChromeDriver();
             App.driver.Manage().Window.Maximize();
+            Utils.ImplisitWait(4);
         }
 
 
@@ -42,7 +43,7 @@ namespace AutomationFramework
                 PostalCode = "77001",
                 MobilePhone = "+385687569845"
             };
-            Utils.Wait(5);
+            Utils.WaitForExists("id_gender1");
             CreateAccount createAccount = new CreateAccount();
             createAccount.PopulatePersoanalInfo(form);
 
@@ -61,8 +62,8 @@ namespace AutomationFramework
             App.driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=authentication&back=my-account");
             LoginPage loginPage = new LoginPage();
             loginPage.CreateAccount("oleg_rud@mail.ru");
-            Utils.Wait(2);
-            String text = App.driver.FindElement(By.Id("create_account_error")).Text;
+            Utils.WaitForVisible("create_account_error", 5);
+            String text = App.driver.FindElement(By.Id("create_account_error")).GetText("Text");
             Assert.AreEqual("An account using this email address has already been registered. Please enter a valid password or request a new one.", text);
 
         }

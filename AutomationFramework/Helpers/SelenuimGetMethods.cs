@@ -11,9 +11,9 @@ namespace AutomationFramework.Helpers
     public static class SelenuimGetMethods
     {
 
-        public static string GetText(this IWebElement element, string value)
+        public static string GetText(this IWebElement element, string attribute)
         {
-                return element.GetAttribute("value");
+            return element.Text;
 
         }
 
